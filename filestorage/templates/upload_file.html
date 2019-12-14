@@ -1,0 +1,11 @@
+<!-- using Template Inheritance in Django -->
+{% extends "base.html" %}
+<!-- This block will be used to upload any sort of file -->
+{% block content %}
+<form method="post" enctype="multipart/form-data" action="">
+{% csrf_token %}
+Select a file: <input type="file" name="myFile"><br><br>
+<input type="submit" value="please submit">
+</form>
+{% endblock %}
+
